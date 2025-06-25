@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Player } from '@lottiefiles/react-lottie-player';
+import dynamic from 'next/dynamic';
+
+const Player = dynamic(() => import('@lottiefiles/react-lottie-player').then(mod => mod.Player), { ssr: false });
 
 export default function Stores({theme}) {
     const headerRef = useRef(null);
