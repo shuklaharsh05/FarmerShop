@@ -28,7 +28,9 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', isDark);
+    if (typeof window !== 'undefined') {
+      document.documentElement.classList.toggle('dark', isDark);
+    }
   }, [isDark]);
 
   return (
