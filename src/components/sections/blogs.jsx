@@ -11,7 +11,9 @@ export default function Blogs({ theme }) {
   const isCardsInView = useInView(cardsRef, { once: true, margin: "-100px" });
 
   useEffect(() => {
-    document.body.className = theme ? 'dark' : 'light';
+    if (typeof window !== 'undefined') {
+      document.body.className = theme ? 'dark' : 'light';
+    }
   }, [theme]);
 
   const blogs = [

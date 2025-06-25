@@ -10,7 +10,9 @@ export default function Stores({theme}) {
     const isContentInView = useInView(contentRef, { once: true, margin: "-100px" });
 
     useEffect(() => {
-        document.body.className = theme ? 'dark' : 'light';
+        if (typeof window !== 'undefined') {
+            document.body.className = theme ? 'dark' : 'light';
+        }
       }, [theme]);
     
   return (
