@@ -131,7 +131,7 @@ export default function Blogs({ theme }) {
              }`}
            >
              <h4 className="text-lg sm:text-xl font-semibold mb-1">{blog.title}</h4>
-             <p className="text-xs sm:text-sm leading-relaxed">{blog.description}</p>
+             <p className="text-sm sm:text-sm leading-relaxed">{blog.description}</p>
            </div>
          </motion.div>
          

@@ -24,11 +24,11 @@ export default function Footer({ theme }) {
       
       {/* Content */}
       <div className="relative z-10 w-[90%] mx-auto px-2 lg:px-6 py-12 max-w-[76rem]">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           
           {/* Column 1: Contact & Support */}
           <div className="flex flex-col gap-2">
-            <h3 className="text-base md:text-lg lg:text-3xl font-orbitron mb-2 lg:mb-4 font-normal">Contact</h3>
+            <h3 className="text-base md:text-lg lg:text-3xl font-orbitron mb-2 lg:mb-4 font-normal">Contact & Support</h3>
             <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">Contact Us</a>
             <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">Customer Support</a>
           </div>

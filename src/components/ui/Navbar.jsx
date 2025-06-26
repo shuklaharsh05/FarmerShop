@@ -141,11 +141,11 @@ export default function Navbar({ isDark, setIsDark }) {
           </div>
 
           {/* Navigation Links */}
-          <a href="#aboutus" className="block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">About Us</a>
-          <a href="#" className="block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Our Offerings</a>
-          <a href="#" className="block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Why Choose Us</a>
-          <a href="#" className="block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Images</a>
-          <a href="#" className="block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Reviews</a>
+          <a href="#" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">About Us</a>
+          <a href="#" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Our Offerings</a>
+          <a href="#" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Why Choose Us</a>
+          <a href="#" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Images</a>
+          <a href="#" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Reviews</a>
 
           
 

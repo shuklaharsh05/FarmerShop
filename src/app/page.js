@@ -76,7 +76,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="bg-opacity-70 mt-4 px-4 py-2 max-w-4xl text-base lg:text-lg font-medium"
+            className="bg-opacity-70 mt-4 px-4 py-2 max-w-4xl text-base lg:text-lg font-normal"
           >
             Farmertechindia, established in 2017, is a product and service-based company in the agricultural sector.
             It focuses on providing innovative solutions for farmers, integrating technology to enhance productivity
