@@ -9,7 +9,7 @@ const SocialIcon = ({ href, children }) => (
 
 export default function Footer({ theme }) {
   return (
-    <footer className={`relative w-full min-h-[450px] overflow-hidden ${theme? 'dark:bg-black dark:text-white' : 'bg-white text-black'}`}>
+    <footer className={`relative w-full min-h-[450px] overflow-hidden ${theme ? 'bg-black text-white' : 'bg-white text-black'}`}>
       {/* Background Radial Glow */}
       <div
         className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 
@@ -54,15 +54,15 @@ export default function Footer({ theme }) {
           <div className="flex flex-col col-span-2 md:col-span-1">
             <h3 className="text-base md:text-lg lg:text-3xl font-orbitron mb-2 lg:mb-4 font-normal">Contact us</h3>
             <div className="flex items-center mb-3">
-              <MapPinIcon className={`w-6 h-6 mr-3 ${theme ? 'text-white' : 'dark:text-black'}`}/>
+              <MapPinIcon className={`w-6 h-6 mr-3 ${theme ? 'text-white' : 'text-black'}`}/>
               <span>India</span>
             </div>
             <div className="flex items-center mb-3">
-              <EnvelopeIcon className={`min-w-5 h-6 mr-3 ${theme ? 'text-white' : 'dark:text-black'}`}/>
+              <EnvelopeIcon className={`min-w-5 h-6 mr-3 ${theme ? 'text-white' : 'text-black'}`}/>
               <span>farmershoptechindia@gmail.com</span>
             </div>
             <div className="flex items-center mb-4">
-              <PhoneIcon className={`w-6 h-6 mr-3 ${theme ? 'text-white' : 'dark:text-black'}`}/>
+              <PhoneIcon className={`w-6 h-6 mr-3 ${theme ? 'text-white' : 'text-black'}`}/>
               <span>+91 7890XXXXXX</span>
             </div>
             <div className="flex space-x-4 mt-4">

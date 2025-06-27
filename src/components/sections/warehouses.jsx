@@ -61,7 +61,7 @@ export default function Warehouses({theme}) {
             absolute 
             text-[35px] lg:text-[120px] font-bold font-orbitron
             translate-x-[2px] translate-y-[2px] z-10 
-             ${theme ? 'text-white/50' : 'dark:text-white/50'}
+            ${theme ? 'text-white/50' : 'dark:text-black/50'}
           `}
         >
           WAREHOUSES
