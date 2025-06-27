@@ -19,7 +19,7 @@ export default function Stores({theme}) {
     
   return (
     <section
-    className={`min-h-[650px] lg:h-screen transition-colors duration-500 flex flex-col items-center justify-start pt-10 lg:pt-28 overflow-hidden relative
+    className={`min-h-[650px] lg:h-screen transition-colors duration-500 flex flex-col items-center justify-start pt-10 lg:pt-16 overflow-hidden relative
       ${theme 
         ? 'bg-black lg:bg-[radial-gradient(ellipse_at_center,_#004d00_0%,_#000000_100%)] text-white' 
         : 'bg-white lg:bg-[radial-gradient(ellipse_at_center,_#004d00_0%,_#f0fff0_100%)] text-[#000]'
@@ -63,7 +63,7 @@ export default function Stores({theme}) {
             absolute 
             text-[35px] lg:text-[120px] font-bold font-orbitron
             translate-x-[2px] translate-y-[2px] z-10 
-            ${theme ? 'text-white/35 dark:text-black/70' : 'text-gray-900/35'}
+            ${theme ? 'text-white/50' : 'dark:text-white/50'}
           `}
         >
           STORES

@@ -25,7 +25,7 @@ export default function Whychooseus({theme}) {
   ];
 
   return (
-    <div className={`relative w-full min-h-screen ${theme?'bg-black text-white':' bg-white text-black'} overflow-hidden flex items-center justify-center`}>
+    <div className={`relative w-full pb-6 pt-12 lg:py-0 min-h-screen ${theme?'bg-black text-white':' bg-white text-black'} overflow-hidden flex items-center justify-center`}>
       <div className="flex flex-col items-center justify-center w-full">
         {/* Section Title - Appears First */}
         <motion.div 
@@ -33,7 +33,7 @@ export default function Whychooseus({theme}) {
           initial={{ opacity: 0, y: -50 }}
           animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
           transition={{ duration: 0.8, delay: 0.2 }} // Appears first
-          className="relative w-full h-40 flex items-center justify-center font-orbitron overflow-hidden"
+          className="relative w-full lg:h-40 h-20 flex items-center justify-center font-orbitron overflow-hidden mb-4 lg:mb-0"
         >
           {/* Background Text */}
           <motion.h2 
@@ -59,7 +59,7 @@ export default function Whychooseus({theme}) {
         {/* Card Section */}
         <motion.div 
           ref={cardsRef}
-          className="flex flex-wrap lg:mt-10 mt-4 ml-6 lg:ml-0 justify-center items-start gap-20 lg:gap-8 px-4 py-10 max-w-7xl"
+          className="flex flex-wrap lg:mt-10 mt-4 ml-4 lg:ml-0 justify-center items-start gap-14 lg:gap-8 px-4 py-10 max-w-7xl"
         >
           {[1, 2, 3].map((num, index) => (
             <motion.div 
@@ -93,10 +93,10 @@ export default function Whychooseus({theme}) {
                 initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
                 animate={isCardsInView ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.5, rotate: -180 }}
                 transition={{ duration: 0.6, delay: 1.2 + (index * 0.4) }} // Badge appears after card
-                className="absolute top-[-25px] lg:left-[20px] left-[10px] transform -translate-x-1/2 -translate-y-1/4 z-0"
+                className="absolute lg:top-[-25px] top-[-18px] lg:left-[20px] left-[14px] transform -translate-x-1/2 -translate-y-1/4 z-0"
               >
-                <div className="relative lg:w-[80px] lg:h-[80px] w-[70px] h-[70px] bg-gradient-to-br from-[#32B72A] to-[#165113] rounded-2xl shadow-lg">
-                  <div className="absolute top-[-4px] lg:top-0 lg:left-0 left-[-5px] transform translate-x-1/4 translate-y-1/4 text-3xl font-orbitron text-white">
+                <div className="relative lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] bg-gradient-to-br from-[#32B72A] to-[#165113] rounded-2xl shadow-lg">
+                  <div className="absolute top-[-4px] lg:top-0 lg:left-0 left-[-5px] transform translate-x-1/4 translate-y-1/4 lg:text-3xl text-2xl font-orbitron text-white">
                     0{num}
                   </div>
                 </div>

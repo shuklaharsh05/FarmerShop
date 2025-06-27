@@ -87,7 +87,7 @@ export default function Newsletter({ theme }) {
            className="relative w-full max-w-xs sm:max-w-[300px] lg:max-w-[320px] bg-transparent rounded-xl overflow-hidden group transition-shadow duration-300 mx-auto"
          >
            {/* Masked Image with Smooth Bottom-Right Curve */}
-           <div className="relative w-full h-40 lg:h-44">
+           <div className="relative w-full h-44 lg:h-44">
              <svg
                className="absolute inset-0 w-full h-full z-0"
                viewBox="0 0 320 192"
@@ -116,7 +116,7 @@ export default function Newsletter({ theme }) {
          
              {/* Arrow Button in the Curved Notch */}
              <button
-               className="absolute bottom-1 right-1 z-10 w-10 h-10 sm:w-[44px] sm:h-[44px] rounded-full flex items-center justify-center bg-[#FAD08B] hover:bg-[#FAD08B] text-black transition duration-300"
+               className="absolute bottom-1 right-1 z-10 w-[44px] h-[44px] rounded-full flex items-center justify-center bg-[#FAD08B] hover:bg-[#FAD08B] text-black transition duration-300"
              >
                <Image src="/images/right-arrow.svg" alt="Arrow Right" width={20} height={20} className='w-5 h-5'/>
              </button>

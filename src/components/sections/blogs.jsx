@@ -87,7 +87,7 @@ export default function Blogs({ theme }) {
            className="relative w-full max-w-xs sm:max-w-[300px] lg:max-w-[320px] bg-transparent rounded-xl overflow-hidden group transition-shadow duration-300 mx-auto"
          >
            {/* Masked Image with Smooth Bottom-Right Curve */}
-           <div className="relative w-full h-44 sm:h-48 lg:h-44">
+           <div className="relative w-full h-44 lg:h-44">
              <svg
                className="absolute inset-0 w-full h-full z-0"
                viewBox="0 0 320 192"

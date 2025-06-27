@@ -93,7 +93,11 @@ export default function Navbar({ isDark, setIsDark }) {
       </div>
 
       {/* Mobile Navigation Menu */}
-      <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'min-h-screen opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
+      <div className={`w-[90%] mx-auto md:hidden absolute top-full left-0 right-0 transition-all duration-300 ease-in-out transform ${
+        isMenuOpen 
+          ? 'translate-y-0 opacity-100' 
+          : '-translate-y-4 opacity-0 pointer-events-none'
+      }`}>
         <div className="mt-2 bg-[#3F7F30]/20 backdrop-blur-sm rounded-xl p-4 space-y-4">
           
           {/* Theme and Language Row */}
