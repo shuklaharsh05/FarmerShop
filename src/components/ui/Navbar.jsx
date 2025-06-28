@@ -50,6 +50,20 @@ export default function Navbar({ isDark, setIsDark }) {
     };
   }, [isMenuOpen]);
 
+  // Handle link clicks and close mobile menu
+  const handleLinkClick = (e, targetId) => {
+    e.preventDefault();
+    setIsMenuOpen(false); // Close mobile menu
+    
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div className={`fixed top-0 inset-x-0 z-30 w-full mx-auto px-4 transition-transform duration-300 ease-in-out ${
       isNavbarVisible ? 'translate-y-5' : '-translate-y-full'
@@ -63,11 +77,11 @@ export default function Navbar({ isDark, setIsDark }) {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8 font-orbitron font-medium text-[15px]">
-          <a href="#aboutus" className="hover:text-green-400 transition-colors duration-200">About Us</a>
-          <a href="#services" className="hover:text-green-400 transition-colors duration-200">Our Offerings</a>
-          <a href="#whychooseus" className="hover:text-green-400 transition-colors duration-200">Why Choose Us</a>
-          <a href="#blogs" className="hover:text-green-400 transition-colors duration-200">Blogs</a>
-          <a href="#reviews" className="hover:text-green-400 transition-colors duration-200">Reviews</a>
+          <a href="#aboutus" className="hover:text-green-400 transition-colors duration-200" onClick={(e) => handleLinkClick(e, '#aboutus')}>About Us</a>
+          <a href="#services" className="hover:text-green-400 transition-colors duration-200" onClick={(e) => handleLinkClick(e, '#services')}>Our Offerings</a>
+          <a href="#whychooseus" className="hover:text-green-400 transition-colors duration-200" onClick={(e) => handleLinkClick(e, '#whychooseus')}>Why Choose Us</a>
+          <a href="#blogs" className="hover:text-green-400 transition-colors duration-200" onClick={(e) => handleLinkClick(e, '#blogs')}>Blogs</a>
+          <a href="#reviews" className="hover:text-green-400 transition-colors duration-200" onClick={(e) => handleLinkClick(e, '#reviews')}>Reviews</a>
         </div>
 
         {/* Right Side Items - Always Visible */}
@@ -186,11 +200,11 @@ export default function Navbar({ isDark, setIsDark }) {
           </div>
 
           {/* Navigation Links */}
-          <a href="#aboutus" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">About Us</a>
-          <a href="#services" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Our Offerings</a>
-          <a href="#whychooseus" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Why Choose Us</a>
-          <a href="#blogs" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Blogs</a>
-          <a href="#reviews" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Reviews</a>
+          <a href="#aboutus" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2" onClick={(e) => handleLinkClick(e, '#aboutus')}>About Us</a>
+          <a href="#services" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2" onClick={(e) => handleLinkClick(e, '#services')}>Our Offerings</a>
+          <a href="#whychooseus" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2" onClick={(e) => handleLinkClick(e, '#whychooseus')}>Why Choose Us</a>
+          <a href="#blogs" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2" onClick={(e) => handleLinkClick(e, '#blogs')}>Blogs</a>
+          <a href="#reviews" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2" onClick={(e) => handleLinkClick(e, '#reviews')}>Reviews</a>
 
           
 
