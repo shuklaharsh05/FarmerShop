@@ -100,7 +100,7 @@ export default function About({theme}) {
     ref={imageRef}
     initial={{ opacity: 0, x: 100, scale: 0.8 }}
     animate={isImageInView ? { opacity: 1, x: 0, scale: 1 } : { opacity: 0, x: 100, scale: 0.8 }}
-    transition={{ duration: 1, delay: 0.8 }}
+    transition={{ duration: 1, delay: 0.2 }}
     className="flex flex-col justify-center items-center w-full lg:w-1/2 relative"
   >
     <div className="relative w-60 lg:w-80 h-60 lg:h-80 mt-6 flex items-center justify-center">

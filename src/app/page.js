@@ -44,7 +44,7 @@ export default function Home() {
           <Player
             autoplay
             loop
-            src="/animations/Artboard_1.json"
+            src="/gif/First-page.json"
             className=" w-full h-full bg-black"
             style={{ width: '100%', height: '100%' }}
           />

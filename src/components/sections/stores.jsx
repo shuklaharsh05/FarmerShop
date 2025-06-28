@@ -33,7 +33,7 @@ export default function Stores({theme}) {
           <Player
             autoplay
             loop
-            src="/animations/third_page_03.json"
+            src="/gif/Artboard_1.json"
             style={{ 
               width: '100%', 
               height: '100%',

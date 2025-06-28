@@ -22,7 +22,7 @@ export default function OurServices({ theme }) {
   "Organic Vegetables",
 ];
   return (
-    <section
+    <section id='services'
       className={`lg:min-h-screen transition-colors duration-500 flex flex-col items-center justify-center pt-12 pb-8 lg:py-0
         ${theme 
           ? 'bg-black lg:bg-[radial-gradient(ellipse_at_center,_#004d00_0%,_#000000_100%)] text-white' 

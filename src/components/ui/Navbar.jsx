@@ -64,10 +64,10 @@ export default function Navbar({ isDark, setIsDark }) {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8 font-orbitron font-medium text-[15px]">
           <a href="#aboutus" className="hover:text-green-400 transition-colors duration-200">About Us</a>
-          <a href="#" className="hover:text-green-400 transition-colors duration-200">Our Offerings</a>
-          <a href="#" className="hover:text-green-400 transition-colors duration-200">Why Choose Us</a>
-          <a href="#" className="hover:text-green-400 transition-colors duration-200">Blogs</a>
-          <a href="#" className="hover:text-green-400 transition-colors duration-200">Reviews</a>
+          <a href="#services" className="hover:text-green-400 transition-colors duration-200">Our Offerings</a>
+          <a href="#whychooseus" className="hover:text-green-400 transition-colors duration-200">Why Choose Us</a>
+          <a href="#blogs" className="hover:text-green-400 transition-colors duration-200">Blogs</a>
+          <a href="#reviews" className="hover:text-green-400 transition-colors duration-200">Reviews</a>
         </div>
 
         {/* Right Side Items - Always Visible */}
@@ -186,11 +186,11 @@ export default function Navbar({ isDark, setIsDark }) {
           </div>
 
           {/* Navigation Links */}
-          <a href="#" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">About Us</a>
-          <a href="#" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Our Offerings</a>
-          <a href="#" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Why Choose Us</a>
-          <a href="#" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Blogs</a>
-          <a href="#" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Reviews</a>
+          <a href="#aboutus" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">About Us</a>
+          <a href="#services" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Our Offerings</a>
+          <a href="#whychooseus" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Why Choose Us</a>
+          <a href="#blogs" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Blogs</a>
+          <a href="#reviews" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Reviews</a>
 
           
 

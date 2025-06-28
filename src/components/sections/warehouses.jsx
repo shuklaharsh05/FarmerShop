@@ -32,7 +32,7 @@ export default function Warehouses({theme}) {
           <Player
             autoplay
             loop
-            src="/animations/second_page_02.json"
+            src="/gif/Second-page.json"
             style={{ 
               width: '100%', 
               height: '100%',

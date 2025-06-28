@@ -25,7 +25,7 @@ export default function Whychooseus({theme}) {
   ];
 
   return (
-    <div className={`relative w-full pb-6 pt-12 lg:py-0 min-h-screen ${theme?'bg-black text-white':' bg-white text-black'} overflow-hidden flex items-center justify-center`}>
+    <div id='whychooseus' className={`relative w-full pb-6 pt-12 lg:py-0 min-h-screen ${theme?'bg-black text-white':' bg-white text-black'} overflow-hidden flex items-center justify-center`}>
       <div className="flex flex-col items-center justify-center w-full">
         {/* Section Title - Appears First */}
         <motion.div 

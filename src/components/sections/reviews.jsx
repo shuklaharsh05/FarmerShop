@@ -6,27 +6,27 @@ const reviews = [
   {
     id: 1,
     text: "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-    avatar: "/review-avatar.png",
+    avatar: "/images/review-avatar.png",
   },
   {
     id: 2,
-    text: "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-    avatar: "/review-avatar.png",
+    text: "Amazing service and products. I've been using them for a while now and I'm very satisfied with the quality of the products and the service.",
+    avatar: "/images/review-avatar.png",
   },
   {
     id: 3,
     text: "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-    avatar: "/review-avatar.png",
+    avatar: "/images/review-avatar.png",
   },
   {
     id: 4,
-    text: "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-    avatar: "/review-avatar.png",
+    text: "Amazing service and products. I've been using them for a while now and I'm very satisfied with the quality of the products and the service.",
+    avatar: "/images/review-avatar.png",
   },
   {
     id: 5,
     text: "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-    avatar: "/review-avatar.png",
+    avatar: "/images/review-avatar.png",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Reviews({ theme }) {
   }, []);
 
   return (
-    <section
+    <section id='reviews'
       className={`relative w-full min-h-screen transition-colors duration-500 flex flex-col items-center justify-start pt-8 lg:pt-20 pb-12 lg:pb-0 overflow-hidden
       ${
         theme
@@ -140,7 +140,7 @@ export default function Reviews({ theme }) {
                 >
                   <div className="min-w-[50px] lg:min-w-[80px] min-h-[50px] lg:min-h-[80px]">
                     <Image
-                      src='/images/review-avatar.png'
+                      src={review.avatar}
                       alt="Customer"
                       width={100}
                       height={100}

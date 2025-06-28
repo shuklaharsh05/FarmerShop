@@ -41,7 +41,7 @@ export default function Blogs({ theme }) {
   ];
 
   return (
-    <div className={`relative w-full min-h-screen overflow-hidden flex items-center justify-center ${theme ? 'bg-black' : 'bg-white'}`}>
+    <div id='blogs' className={`relative w-full min-h-screen overflow-hidden flex items-center justify-center ${theme ? 'bg-black' : 'bg-white'}`}>
       <div className="relative z-10 flex flex-col items-center justify-center w-full">
         {/* ========= HEADER AREA ========= */}
         <div ref={headerRef} className="relative w-full h-16 lg:h-40 flex items-center justify-center overflow-hidden">
