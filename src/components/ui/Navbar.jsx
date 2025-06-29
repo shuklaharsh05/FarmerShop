@@ -80,9 +80,9 @@ export default function Navbar({ isDark, setIsDark }) {
       <div className="w-full max-w-5xl mx-auto flex items-center justify-between bg-[#3F7F30]/20 backdrop-blur-sm rounded-full px-4 py-2 font-orbitron">
         
         {/* Logo - Always Visible */}
-        <div className="flex items-center">
+        <a href="/" className="flex items-center">
           <img src="/images/logofarm.png" alt="Logo" className="w-8 h-8" loading="lazy" />
-        </div>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8 font-orbitron font-medium text-[15px]">
