@@ -108,7 +108,7 @@ export default function DeliveryAreas() {
             {deliveryAreas.map((area) => (
                 <div key={area.name}>
                     <p className="font-semibold">Currently Delivering In: {area.name}</p>
-                    <ul className="mt-4 list-disc space-y-5 pl-6 grid grid-cols-2 lg:grid-cols-6 gap-4">
+                    <ul className="mt-4 list-disc space-y-2 lg:space-y-5 pl-6 grid grid-cols-2 lg:grid-cols-6 lg:gap-4">
                         {area.state.map((state) => (
                             <li key={state}>{state}</li>
                         ))}

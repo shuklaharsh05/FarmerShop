@@ -330,7 +330,7 @@ export default function Careers() {
                             value={shareEmail}
                             onChange={e => setShareEmail(e.target.value)}
                             placeholder="Enter email address"
-                            className="flex-1 px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#32B72A] placeholder-gray-400 text-black dark:text-white"
+                            className="max-w-[85%] flex-1 px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#32B72A] placeholder-gray-400 text-black dark:text-white"
                           />
                           <button
                             onClick={handleShareSend}
@@ -345,7 +345,7 @@ export default function Careers() {
                             type="text"
                             readOnly
                             value={window.location.origin + '/careers?job=' + job.id}
-                            className="flex-1 px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none text-black dark:text-white"
+                            className="max-w-[85%] flex-1 px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none text-black dark:text-white"
                           />
                           <button
                             onClick={handleCopy}

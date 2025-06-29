@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import { usePathname, useRouter } from 'next/navigation';
 
 const SocialIcon = ({ href, children }) => (
   <a href={href} target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-300 transition-colors">
@@ -8,6 +9,27 @@ const SocialIcon = ({ href, children }) => (
 );
 
 export default function Footer({ theme }) {
+
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleNavClick = (sectionId) => {
+    // Close mobile menu
+    setIsMenuOpen(false);
+    
+    if (pathname === '/') {
+      // Already on home page, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to home page with hash
+      router.push(`/#${sectionId}`);
+    }
+  };
   return (
     <footer className={`relative w-full min-h-[450px] overflow-hidden ${theme ? 'bg-black text-white' : 'bg-white text-black'}`}>
       {/* Background Radial Glow */}
@@ -36,9 +58,9 @@ export default function Footer({ theme }) {
           {/* Column 2: Company */}
           <div className="flex flex-col gap-2">
             <h3 className="text-base md:text-lg lg:text-3xl font-orbitron mb-2 lg:mb-4 font-normal">Company</h3>
-            <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">About Us</a>
+            <a href="/#aboutus" className="hover:text-green-300 transition-colors text-sm md:text-base">About Us</a>
             <a href="/careers" className="hover:text-green-300 transition-colors text-sm md:text-base">Careers</a>
-            <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">News</a>
+            <a href="/#newsletter" onClick={() => handleNavClick('newsletter')} className="hover:text-green-300 transition-colors text-sm md:text-base">News</a>
           </div>
 
           {/* Column 3: Our Services */}
