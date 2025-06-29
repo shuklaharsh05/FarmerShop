@@ -29,25 +29,26 @@ export default function Footer({ theme }) {
           {/* Column 1: Contact & Support */}
           <div className="flex flex-col gap-2">
             <h3 className="text-base md:text-lg lg:text-3xl font-orbitron mb-2 lg:mb-4 font-normal">Contact & Support</h3>
-            <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">Contact Us</a>
-            <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">Customer Support</a>
+            <a href="/contact-us" className="hover:text-green-300 transition-colors text-sm md:text-base">Contact Us</a>
+            <a href="/customer-support" className="hover:text-green-300 transition-colors text-sm md:text-base">Customer Support</a>
           </div>
 
           {/* Column 2: Company */}
           <div className="flex flex-col gap-2">
             <h3 className="text-base md:text-lg lg:text-3xl font-orbitron mb-2 lg:mb-4 font-normal">Company</h3>
             <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">About Us</a>
-            <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">Career</a>
+            <a href="/careers" className="hover:text-green-300 transition-colors text-sm md:text-base">Careers</a>
             <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">News</a>
           </div>
 
           {/* Column 3: Our Services */}
           <div className="flex flex-col gap-2 col-span-2 md:col-span-1">
             <h3 className="text-base md:text-lg lg:text-3xl font-orbitron mb-2 lg:mb-4 font-normal">Our Services</h3>
-            <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">Our Services</a>
-            <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">Delivery Areas</a>
-            <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">Download Apps Links</a>
-            <a href="#" className="hover:text-green-300 transition-colors text-sm md:text-base">Privacy Policy | Terms of Use</a>
+            <a href="/#services" className="hover:text-green-300 transition-colors text-sm md:text-base">Our Services</a>
+            <a href="/delivery-areas" className="hover:text-green-300 transition-colors text-sm md:text-base">Delivery Areas</a>
+            <a href="/get-our-app" className="hover:text-green-300 transition-colors text-sm md:text-base">Download Apps Links</a>
+            <a href="/privacy-policy" className="hover:text-green-300 transition-colors text-sm md:text-base">Privacy Policy</a>
+            <a href="/terms-of-use" className="hover:text-green-300 transition-colors text-sm md:text-base">Terms of Use</a>
           </div>
 
           {/* Column 4: Contact Us */}

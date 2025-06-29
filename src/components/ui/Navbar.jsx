@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import React, { useState, useEffect, useRef } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Navbar({ isDark, setIsDark }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -6,8 +8,29 @@ export default function Navbar({ isDark, setIsDark }) {
   const [lastScrollY, setLastScrollY] = useState(0);
   const navbarRef = useRef(null);
 
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleNavClick = (sectionId) => {
+    // Close mobile menu
+    setIsMenuOpen(false);
+    
+    if (pathname === '/') {
+      // Already on home page, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to home page with hash
+      router.push(`/#${sectionId}`);
+    }
+  };
+
   const toggleTheme = () => {
     setIsDark(prev => !prev);
+    // Close mobile menu if open
+    setIsMenuOpen(false);
   };
 
   const toggleMenu = () => {
@@ -50,20 +73,6 @@ export default function Navbar({ isDark, setIsDark }) {
     };
   }, [isMenuOpen]);
 
-  // Handle link clicks and close mobile menu
-  const handleLinkClick = (e, targetId) => {
-    e.preventDefault();
-    setIsMenuOpen(false); // Close mobile menu
-    
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
   return (
     <div className={`fixed top-0 inset-x-0 z-30 w-full mx-auto px-4 transition-transform duration-300 ease-in-out ${
       isNavbarVisible ? 'translate-y-5' : '-translate-y-full'
@@ -77,12 +86,12 @@ export default function Navbar({ isDark, setIsDark }) {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8 font-orbitron font-medium text-[15px]">
-          <a href="#aboutus" className="hover:text-green-400 transition-colors duration-200" onClick={(e) => handleLinkClick(e, '#aboutus')}>About Us</a>
-          <a href="#services" className="hover:text-green-400 transition-colors duration-200" onClick={(e) => handleLinkClick(e, '#services')}>Our Offerings</a>
-          <a href="#whychooseus" className="hover:text-green-400 transition-colors duration-200" onClick={(e) => handleLinkClick(e, '#whychooseus')}>Why Choose Us</a>
-          <a href="#blogs" className="hover:text-green-400 transition-colors duration-200" onClick={(e) => handleLinkClick(e, '#blogs')}>Blogs</a>
-          <a href="#reviews" className="hover:text-green-400 transition-colors duration-200" onClick={(e) => handleLinkClick(e, '#reviews')}>Reviews</a>
-        </div>
+      <button onClick={() => handleNavClick('aboutus')} className="hover:text-green-400 transition-colors duration-200">About Us</button>
+      <button onClick={() => handleNavClick('services')} className="hover:text-green-400 transition-colors duration-200">Our Offerings</button>
+      <button onClick={() => handleNavClick('whychooseus')} className="hover:text-green-400 transition-colors duration-200">Why Choose Us</button>
+      <button onClick={() => handleNavClick('blogs')} className="hover:text-green-400 transition-colors duration-200">Blogs</button>
+      <button onClick={() => handleNavClick('reviews')} className="hover:text-green-400 transition-colors duration-200">Reviews</button>
+    </div>
 
         {/* Right Side Items - Always Visible */}
         <div className="flex items-center space-x-4">
@@ -200,17 +209,20 @@ export default function Navbar({ isDark, setIsDark }) {
           </div>
 
           {/* Navigation Links */}
-          <a href="#aboutus" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2" onClick={(e) => handleLinkClick(e, '#aboutus')}>About Us</a>
-          <a href="#services" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2" onClick={(e) => handleLinkClick(e, '#services')}>Our Offerings</a>
-          <a href="#whychooseus" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2" onClick={(e) => handleLinkClick(e, '#whychooseus')}>Why Choose Us</a>
-          <a href="#blogs" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2" onClick={(e) => handleLinkClick(e, '#blogs')}>Blogs</a>
-          <a href="#reviews" className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2" onClick={(e) => handleLinkClick(e, '#reviews')}>Reviews</a>
+          <button onClick={() => handleNavClick('aboutus')} className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">About Us</button>
+          <button onClick={() => handleNavClick('services')} className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Our Offerings</button>
+          <button onClick={() => handleNavClick('whychooseus')} className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Why Choose Us</button>
+          <button onClick={() => handleNavClick('blogs')} className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Blogs</button>
+          <button onClick={() => handleNavClick('reviews')} className="text-center block text-base font-orbitron hover:text-green-400 transition-colors duration-200 py-2">Reviews</button>
 
           
 
           {/* Login Button in Mobile Menu */}
           <div className="flex justify-center pb-2 border-b border-white/20">
-            <button className="nav-btn w-full px-6 py-2 rounded-full font-krona text-sm text-white">
+            <button 
+              onClick={() => setIsMenuOpen(false)}
+              className="nav-btn w-full px-6 py-2 rounded-full font-krona text-sm text-white"
+            >
               Login
             </button>
           </div>
