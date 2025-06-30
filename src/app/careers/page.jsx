@@ -352,9 +352,18 @@ export default function Careers() {
                             className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                             aria-label="Copy job link"
                           >
-                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><rect x="2" y="2" width="13" height="13" rx="2"/></svg>
+                            {copySuccess ? (
+                              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                              </svg>
+                            ) : (
+                              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                                <rect x="2" y="2" width="13" height="13" rx="2"/>
+                              </svg>
+                            )}
                           </button>
-                          {copySuccess && <span className="text-xs text-green-500 ml-2">Copied!</span>}
+                          {/* {copySuccess && <span className="text-xs text-green-500 ml-2">Copied!</span>} */}
                         </div>
                       </div>
                     </div>
