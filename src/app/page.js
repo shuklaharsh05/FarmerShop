@@ -12,6 +12,7 @@ import Stores from '../components/sections/stores';
 import Footer from '../components/ui/Footer';
 import Reviews from '../components/sections/reviews';
 import Newsletter from '../components/sections/newsletter';
+import CookieConsent from '../components/ui/CookieConsent';
 
 const Player = dynamic(() => import('@lottiefiles/react-lottie-player').then(mod => mod.Player), { ssr: false });
 
@@ -116,6 +117,9 @@ export default function Home() {
 
       {/* Footer */}
       <Footer theme={isDark} />
+      
+      {/* Cookie Consent */}
+      <CookieConsent theme={isDark} />
     </>
   );
 }

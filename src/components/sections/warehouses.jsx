@@ -21,13 +21,13 @@ export default function Warehouses({theme}) {
     <section
     className={`min-h-[650px] lg:h-screen transition-colors duration-500 flex flex-col items-center justify-start pt-10 lg:pt-16 overflow-hidden relative
       ${theme 
-        ? 'bg-black lg:bg-[radial-gradient(ellipse_at_center,_#004d00_0%,_#000000_100%)] text-white' 
-        : 'bg-white lg:bg-[radial-gradient(ellipse_at_center,_#004d00_0%,_#f0fff0_100%)] text-[#000]'
+        ? 'text-white' 
+        : 'text-[#000]'
       }`
     }
   >
      {/* Background Animation */}
-     <div className="absolute inset-0 z-0 overflow-hidden pt-[375px] lg:pt-0">
+     <div className="absolute inset-0 z-0 overflow-hidden">
        <div className="w-full h-full overflow-hidden">
           <Player
             autoplay
@@ -39,8 +39,6 @@ export default function Warehouses({theme}) {
               maxWidth: '100%',
               maxHeight: '100%',
               overflow: 'hidden',
-              backgroundPosition: 'bottom bottom',
-              backgroundSize: 'cover',
               objectPosition: 'bottom',
               objectFit: 'cover'
             }}
@@ -49,7 +47,7 @@ export default function Warehouses({theme}) {
      </div>
 
         {/* Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full z-10" />
+        <div className="absolute top-0 left-0 w-full h-full z-10 bg-black/20" />
       {/* Service Heading */}
       <div ref={headerRef} className="relative w-full h-16 lg:h-40 flex items-center justify-center overflow-hidden z-20">
         {/* Background Text */}

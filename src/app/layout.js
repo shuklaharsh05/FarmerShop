@@ -35,8 +35,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Your App",
-  description: "With custom fonts",
+  title: "Farmershop",
+  description: "Farmershop",
 };
 
 export default function RootLayout({ children }) {

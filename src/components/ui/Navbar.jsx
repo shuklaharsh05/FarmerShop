@@ -96,9 +96,12 @@ export default function Navbar({ isDark, setIsDark }) {
         {/* Right Side Items - Always Visible */}
         <div className="flex items-center space-x-4">
           {/* Login Button - Hidden on Mobile */}
-          <button className="hidden md:block nav-btn px-6 py-1 rounded-full font-krona text-sm text-white">
+          <Link 
+            href="/login"
+            className="hidden md:block nav-btn px-6 py-1 rounded-full font-krona text-sm text-white hover:scale-105 transition-transform duration-200"
+          >
             Login
-          </button>
+          </Link>
           
           {/* Theme Toggle - Desktop only */}
           <button
@@ -219,12 +222,12 @@ export default function Navbar({ isDark, setIsDark }) {
 
           {/* Login Button in Mobile Menu */}
           <div className="flex justify-center pb-2 border-b border-white/20">
-            <button 
-              onClick={() => setIsMenuOpen(false)}
-              className="nav-btn w-full px-6 py-2 rounded-full font-krona text-sm text-white"
+            <Link 
+              href="/login"
+              className="nav-btn w-full px-6 py-2 rounded-full font-krona text-sm text-white hover:scale-105 transition-transform duration-200 text-center"
             >
               Login
-            </button>
+            </Link>
           </div>
         </div>
       </div>
