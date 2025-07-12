@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section - Fixed */}
-      <div className={`relative w-full min-h-[725px] lg:min-h-screen overflow-hidden ${isDark?'text-white bg-black':'text-black bg-white'} font-sans duration-500`}>
+      <div className={`relative w-full min-h-[660px] lg:min-h-screen overflow-hidden ${isDark?'text-white bg-black':'text-black bg-white'} font-sans duration-500`}>
         {/* Background Animation */}
         <div className="absolute inset-0 z-0 pt-[435px] lg:pt-0">
           <Player

@@ -19,32 +19,23 @@ export default function Warehouses({theme}) {
     
   return (
     <section
-    className={`min-h-[650px] lg:h-screen transition-colors duration-500 flex flex-col items-center justify-start pt-10 lg:pt-16 overflow-hidden relative
+    className={`min-h-[620px] lg:h-screen transition-colors duration-500 flex flex-col items-center justify-start pt-10 lg:pt-16 overflow-hidden relative
       ${theme 
         ? 'text-white' 
         : 'text-[#000]'
       }`
     }
   >
-     {/* Background Animation */}
-     <div className="absolute inset-0 z-0 overflow-hidden">
-       <div className="w-full h-full overflow-hidden">
+      {/* Background Animation */}
+      <div className="absolute inset-0 z-0 pt-[400px] lg:pt-0">
           <Player
             autoplay
             loop
             src="/gif/Second-page.json"
-            style={{ 
-              width: '100%', 
-              height: '100%',
-              maxWidth: '100%',
-              maxHeight: '100%',
-              overflow: 'hidden',
-              objectPosition: 'bottom',
-              objectFit: 'cover'
-            }}
+            className=" w-full h-full bg-black"
+            style={{ width: '100%', height: '100%' }}
           />
-       </div>
-     </div>
+        </div>
 
         {/* Overlay */}
         <div className="absolute top-0 left-0 w-full h-full z-10 bg-black/20" />

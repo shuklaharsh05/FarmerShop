@@ -19,7 +19,7 @@ export default function Stores({theme}) {
     
   return (
     <section
-    className={`min-h-[650px] lg:h-screen transition-colors duration-500 flex flex-col items-center justify-start pt-10 lg:pt-16 overflow-hidden relative
+    className={`min-h-[620px] lg:h-screen transition-colors duration-500 flex flex-col items-center justify-start pt-10 lg:pt-16 overflow-hidden relative
       ${theme 
         ? 'text-white' 
         : 'text-[#000]'
@@ -27,25 +27,16 @@ export default function Stores({theme}) {
     }
   >
 
-     {/* Background Animation */}
-     <div className="absolute inset-0 z-0 overflow-hidden">
-       <div className="w-full h-full overflow-hidden">
+      {/* Background Animation */}
+      <div className="absolute inset-0 z-0 pt-[390px] lg:pt-0">
           <Player
             autoplay
             loop
             src="/gif/Third-page.json"
-            style={{ 
-              width: '100%', 
-              height: '100%',
-              maxWidth: '100%',
-              maxHeight: '100%',
-              overflow: 'hidden',
-              objectPosition: 'bottom',
-              objectFit: 'cover'
-            }}
+            className=" w-full h-full bg-black"
+            style={{ width: '100%', height: '100%' }}
           />
-       </div>
-     </div>
+        </div>
 
         {/* Overlay */}
         <div className="absolute top-0 left-0 w-full h-full z-10 bg-black/20" />
@@ -87,7 +78,7 @@ export default function Stores({theme}) {
         initial={{ opacity: 0, y: 50 }}
         animate={isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="bg-opacity-70 mt-4 px-4 py-2 max-w-5xl text-base text-center lg:text-lg z-20 relative"
+        className="bg-opacity-70 mt-4 lg:mt-40 px-4 py-2 max-w-5xl text-base text-center lg:text-lg z-20 relative"
       >
         Farmertechindia, established in 2017, is a product and service-based company in the agricultural sector. It focuses on providing innovative solutions for farmers, integrating technology to enhance productivity and efficiency. The company offers a range of agricultural products and services tailored to modern farming needs.
       </motion.p>
