@@ -13,22 +13,22 @@ const AppsAccordion = () => {
     {
       title: '01',
       description: 'Farming Rental Equipments',
-      bgimg: '/images/1.webp',
+      bgimg: '/images/s1.webp',
     },
     {
         title: '02',
         description: 'Fresh Fruits',
-        bgimg: '/images/1.webp',
+        bgimg: '/images/s2.webp',
       },
       {
         title: '03',
-        description: 'Dairy Products',
-        bgimg: '/images/1.webp',
+        description: 'Drone Services',
+        bgimg: '/images/s3.webp',
       },
       {
         title: '04',
         description: 'Organic Vegetables',
-        bgimg: '/images/1.webp',
+        bgimg: '/images/s4.webp',
       },
     
     
@@ -50,7 +50,7 @@ const AppsAccordion = () => {
                 src={section.bgimg} 
                 alt={`Image ${index + 1}`} 
                 className={`w-full h-full object-cover transition-all duration-500 ease-in-out ${
-                  activeIndex === index ? 'filter-none' : 'filter blur-2xl'
+                  activeIndex === index ? 'filter-none' : 'filter blur-lg'
                 }`} 
                 width={1000} 
                 height={1000} 
